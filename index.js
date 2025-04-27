@@ -40,8 +40,22 @@ if (window.location.pathname === '/coursebooking' && autoBook) {
    window.location.replace("https://sawware.benno.webstitut.de/coursebooking/book")
 };`
     document.getElementById("code_area").value = code_template;
+    localStorage.setItem("cour_ids", JSON.stringify(ids))
 }
 
 window.onload = function () {
+    const pret = JSON.parse(localStorage.getItem("cour_ids"))
+    if(pret != null) { ids = pret}
+    for (let index = 0; index < ids.length; index++) {
+        const element = ids[index];
+        const nwEl = document.createElement("p");
+        nwEl.id = element;
+        nwEl.classList.add("cou_id");
+        nwEl.innerText = element;
+        nwEl.onclick = function () {
+            delete_id(this);
+        }
+        document.getElementById("course_wrapper").append(nwEl);
+    }
     update_code();
 }

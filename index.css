@@ -34,3 +34,7 @@ textarea {
     display: flex;
     gap: 1rem;
 }
+
+#special {
+    color: greenyellow;
+}
