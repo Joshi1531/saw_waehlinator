@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(16, 37, 21);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: aliceblue;
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+.cou_id {
+    background-color: #da5c5c;
+    padding: 0.8rem;
+    width: fit-content;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+textarea {
+    background-color: #292929;
+    color: rgb(68, 199, 216);
+    width: 60vw;
+    height: 15rem;
+    font-size: 1.2rem;
+}
+
+#course_wrapper {
+    display: flex;
+    gap: 1rem;
+}
