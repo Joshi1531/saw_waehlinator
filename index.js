@@ -1,4 +1,5 @@
 var ids = []
+var autoBook = false;
 
 function submit_id() {
     const inp = document.getElementById("id_inp");
@@ -12,7 +13,12 @@ function submit_id() {
     }
     document.getElementById("course_wrapper").append(nwEl);
     inp.value = "";
-    update_code()
+    update_code();
+}
+
+function changeAutoSet(val) {
+    autoBook = val;
+    update_code();
 }
 
 function delete_id(elem) {
@@ -22,8 +28,10 @@ function delete_id(elem) {
 }
 
 function update_code() {
+    var theStr = "false"
+    if(autoBook) { theStr = "true"}
     const code_template = `const kurIDs = ${JSON.stringify(ids)};
-const autoBook = false;
+const autoBook = ${theStr};
 
 kurIDs.forEach(kurID => {
    Livewire.dispatch('addKurs', { kurID });
