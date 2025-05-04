@@ -34,7 +34,7 @@ function update_code() {
 const autoBook = ${theStr};
 
 kurIDs.forEach(kurID => {
-   Livewire.dispatch('addKurs', JSON.parse('{\u0022kursID\u0022:kurID}'));
+   Livewire.dispatch('addKurs', JSON.parse(\`{\u0022kursID\u0022:\${kurID}}\`));
 });
 if (window.location.pathname === '/coursebooking' && autoBook) {
    window.location.replace("https://sawware.benno.webstitut.de/coursebooking/book")
