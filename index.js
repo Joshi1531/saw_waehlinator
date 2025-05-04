@@ -27,6 +27,12 @@ function delete_id(elem) {
     update_code()
 }
 
+function check_subm(e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        submit_id();
+    }
+}
+
 function update_code() {
     var theStr = "false"
     if(autoBook) { theStr = "true"}

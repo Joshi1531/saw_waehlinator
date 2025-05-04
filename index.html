@@ -10,11 +10,11 @@
     <script type="text/javascript" src="index.js"></script>
     <h1>SAW Wählinator</h1>
     <p style="color: rgb(136, 136, 136);">Von Anton und Josua</p>
-    <input placeholder="Kurs-Id eingeben" id="id_inp">
+    <input placeholder="Kurs-Nr eingeben" id="id_inp" onkeyup="check_subm(e)">
     <button onclick="submit_id()">Hinzufügen</button>
     <div id="course_wrapper"></div>
     <p>Kurs anklicken, um ihn zu löschen.</p>
-    <p id="special">Deine Kurse werden lokal gespeichert; Auch nach schließen der Seite.</p>
+    <p id="special">Kurse werden lokal gespeichert; Auch nach schließen der Seite.</p>
     <hr>
     <label>Kurswahl automatisch absenden (NICHT GETESTET!!):</label><input type="checkbox" onclick="changeAutoSet(this.checked)">
     <hr>
