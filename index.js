@@ -3,7 +3,7 @@ var autoBook = false;
 
 function submit_id() {
     const inp = document.getElementById("id_inp");
-    ids.push(inp.value.toString());
+    ids.push(inp.value.toString().trim());
     const nwEl = document.createElement("p");
     nwEl.id = inp.value;
     nwEl.classList.add("cou_id");
